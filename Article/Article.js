@@ -134,11 +134,11 @@ const data = [
   const article = document.querySelector('.articles');
 
   data.forEach(dataInside => {
-    article.appendChild(createArticle(dataInside.title, dataInside.date, dataInside.firstParagraph, dataInside.secondParagraph, dataInside.thirdParagraph))
+    article.appendChild(createArticle(dataInside.title, dataInside.date, dataInside.firstParagraph, dataInside.secondParagraph, dataInside.thirdParagraph, dataInside.fourthParagraph))
   });
 
  
-  function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph, fourthParagraph) {
     // Creating new elements here
     const article = document.createElement('div');
     const articleH2 = document.createElement('h2');
@@ -146,6 +146,7 @@ const data = [
     const articleFirst = document.createElement('p');
     const articleSecond = document.createElement('p');
     const articleThird = document.createElement('p');
+    const articleFourth = document.createElement('p');
     const button = document.createElement('span');
 
 
@@ -155,6 +156,7 @@ const data = [
     article.appendChild(articleFirst);
     article.appendChild(articleSecond);
     article.appendChild(articleThird);
+    article.appendChild(articleFourth);
     article.appendChild(button);
 
 
@@ -165,6 +167,7 @@ const data = [
     articleFirst.classList.add('p');
     articleSecond.classList.add('p');
     articleThird.classList.add('p');
+    articleFourth.classList.add('p');
     button.classList.add('expandButton');
 
 
@@ -174,6 +177,7 @@ const data = [
     articleFirst.textContent = firstParagraph;
     articleSecond.textContent = secondParagraph;
     articleThird.textContent = thirdParagraph;
+    articleFourth.textContent = fourthParagraph;
     button.textContent = 'Click me';
 
     button.addEventListener('click', event => {
